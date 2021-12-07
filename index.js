@@ -28,10 +28,14 @@ export const filterOceania = (countries) => {
 // OUTPUT: only countries that include the letters 'au'
 // REQS: use .filter
 
-export const filterAu = (countries) => {};
+export const filterAu = (countries) => {
+  return countries.filter((c) => c.name.includes('au'));
+};
 
 // INPUT: the array of brands from data.js
 // OUTPUT: an array of all the sneakers brands
 // REQS: use .reduce
 
-export const getSneaks = (brands) => {};
+export const getSneaks = (brands) => {
+  return brands.reduce((acc, brand) => [...acc, ...brand.shoes], []);
+};
